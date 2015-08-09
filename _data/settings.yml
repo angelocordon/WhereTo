@@ -1,0 +1,26 @@
+# #-------------------------------
+# # General Site Settings
+# #
+# # title:
+# # description:
+# # email:
+#
+# #-------------------------------
+# # SEO Section
+#
+# # NOTE: Providing SEO information will make this website more searchable on the internet.
+#
+# seo:
+#   description:
+#   rel-author:
+#   rel-publisher:
+#
+# #-------------------------------
+# # Google Analytics Section
+#
+# # Analytics helps you understand who visits your website.
+# # Learn more at: http://support.google.com/analytics/answer/1008065
+#
+# # NOTE: If you want to use Google Analytics for basic web tracking: Just uncomment and enter your UA-Code here.
+#
+# #google-analytics-ua: UA-XXXXXX-X
