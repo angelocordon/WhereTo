@@ -9,9 +9,10 @@
     <link rel="stylesheet" href="/assets/css/main.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.0/css/weather-icons-wind.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.0/css/weather-icons.min.css">
   </head>
   <body>
-    <div class="container-fluid">
+    <div class="container-fluid" id="main">
       <!-- City Background -->
 <div class="container" id="header">
   <!-- Input -->
@@ -23,7 +24,7 @@
   <div class="col-md-2 col-md-offset-6 current-location">
     <i class="fa fa-map-marker"></i>
     <p>San Francisco, CA</p>
-    <p>08:55 AM</p>
+    <p>04:12 PM</p>
   </div>
 
   <!-- Laest Locations -->
@@ -33,8 +34,10 @@
 </div>
 
 <!-- Navigation -->
+<!-- Navigation -->
 <div class="container">
   <a href="#" class="col-md-2 weather">
+    <!-- <i class="wi wi-day-sunny"></i> -->
     <i class="fa fa-sun-o"></i>
     <span class="nav">Weather</span>
   </a>
@@ -50,40 +53,56 @@
   </a>
 </div>
 
+
 <!-- Weather  -->
-<div class="container">
-  <!-- Current -->
-  <div class="col-md-3">
-    82
-    <!-- Today's date  -->
-    Monday 27th
-  </div>
-  <!-- Current Weather -->
-  <div class="col-md-3">
-    4mph / 67
-  </div>
+<div class="forecast-container">
+  <div class="container forecast">
+    <!-- Current -->
+    <div class="col-md-3">
+      <h1>82</h1>
+      <!-- Today's date  -->
+      <p>Mon 10</p>
+    </div>
+    <!-- Current Weather -->
+    <div class="col-md-3">
+      <h1><i class="wi wi-day-sunny"></i></h1>
+      4mph / 67
+    </div>
 
-  <!-- Forecast -->
-  <div class="col-md-1">
-    <p>Tue</p>
+    <!-- Forecast -->
+    <div class="col-md-1">
+      <p>Tue</p>
+      <i class="wi wi-day-sunny"></i>
+      <p>60</p>
+    </div>
+    <div class="col-md-1">
+      <p>Wed</p>
+      <i class="wi wi-day-sunny"></i>
+      <p>60</p>
+    </div>
+    <div class="col-md-1">
+      <p>Thu</p>
+      <i class="wi wi-day-sunny"></i>
+      <p>60</p>
+    </div>
+    <div class="col-md-1">
+      <p>Fri</p>
+      <i class="wi wi-day-sunny"></i>
+      <p>60</p>
+    </div>
+    <div class="col-md-1">
+      <p>Sat</p>
+      <i class="wi wi-day-sunny"></i>
+      <p>60</p>
+    </div>
+    <div class="col-md-1">
+      <p>Sun</p>
+      <i class="wi wi-day-sunny"></i>
+      <p>60</p>
+    </div>
   </div>
-  <div class="col-md-1">
-    <p>Wed</p>
-  </div>
-  <div class="col-md-1">
-    <p>Thu</p>
-  </div>
-  <div class="col-md-1">
-    <p>Fri</p>
-  </div>
-  <div class="col-md-1">
-    <p>Sat</p>
-  </div>
-  <div class="col-md-1">
-    <p>Sun</p>
-  </div>
-
 </div>
+
 
     </div>
     <script src="/assets/js/jquery-2.1.1.min.js"></script>

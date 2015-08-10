@@ -142,6 +142,13 @@ table {
 td, th {
   padding: 0; }
 
+.background, #main {
+  background: url("http://c1.staticflickr.com/3/2882/13831351534_64c6d4e018_b.jpg") no-repeat center center fixed !important;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+
 h1, h2, h3 {
   color: #ffffff;
   font-weight: bold; }
@@ -205,8 +212,11 @@ body {
 * {
   box-sizing: border-box; }
 
+html {
+  background: #40789A; }
+
 body {
-  background: #40789A;
+  background: none !important;
   font-size: 16px;
   line-height: 1.6;
   font-family: "Source Sans Pro" sans-serif;
@@ -214,18 +224,18 @@ body {
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%; }
 
-i.fa {
+i.fa, .weather i.wi {
   display: inline-block;
   height: 40px;
   width: auto;
-  font-size: 1.5em;
+  font-size: 1.2em;
   line-height: 40px; }
 
 span.nav {
   display: inline-block;
   margin-left: 10px;
   position: relative;
-  top: -3px;
+  top: -1px;
   height: 40px;
   line-height: 40px;
   text-transform: uppercase;
@@ -234,7 +244,7 @@ span.nav {
 .weather, .news, .gallery {
   text-align: center;
   padding: 5px 0;
-  border-bottom: 5px solid; }
+  border-bottom: 8px solid; }
 
 .weather {
   border-color: #F5C562; }
@@ -244,6 +254,9 @@ span.nav {
 
 .gallery {
   border-color: #62D2E5; }
+
+#header {
+  height: 70vh; }
 
 .current-location {
   margin-top: 20px;
@@ -256,6 +269,10 @@ span.nav {
   height: 60px;
   line-height: 68px;
   border-top-left-radius: 2em;
-  border-bottom-left-radius: 2em; }
+  border-bottom-left-radius: 2em;
+  margin-top: 30%; }
   .latest-locations i {
     margin-left: 10px; }
+
+.forecast {
+  background: rgba(255, 255, 255, 0.5); }

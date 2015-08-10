@@ -23,54 +23,7 @@ layout: default
 </div>
 
 <!-- Navigation -->
-<div class="container">
-  <a href="#" class="col-md-2 weather">
-    <i class="fa fa-sun-o"></i>
-    <span class="nav">Weather</span>
-  </a>
-
-  <a href="#" class="col-md-2 news">
-    <i class="fa fa-paper-plane"></i>
-    <span class="nav">News &amp; events</span>
-  </a>
-
-  <a href="#" class="col-md-2 gallery">
-    <i class="fa fa-image"></i>
-    <span class="nav"> Gallery</span>
-  </a>
-</div>
+{% include navigation.html %}
 
 <!-- Weather  -->
-<div class="container">
-  <!-- Current -->
-  <div class="col-md-3">
-    82
-    <!-- Today's date  -->
-    Monday 27th
-  </div>
-  <!-- Current Weather -->
-  <div class="col-md-3">
-    4mph / 67
-  </div>
-
-  <!-- Forecast -->
-  <div class="col-md-1">
-    <p>Tue</p>
-  </div>
-  <div class="col-md-1">
-    <p>Wed</p>
-  </div>
-  <div class="col-md-1">
-    <p>Thu</p>
-  </div>
-  <div class="col-md-1">
-    <p>Fri</p>
-  </div>
-  <div class="col-md-1">
-    <p>Sat</p>
-  </div>
-  <div class="col-md-1">
-    <p>Sun</p>
-  </div>
-
-</div>
+{% include weather/forecast.html %}
