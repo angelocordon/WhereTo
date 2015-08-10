@@ -142,35 +142,20 @@ table {
 td, th {
   padding: 0; }
 
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 400;
-  src: local("Open Sans"), local("OpenSans"), url(//themes.googleusercontent.com/static/fonts/opensans/v8/cJZKeOuBrn4kERxqtaUH3bO3LdcAZYWl9Si6vvxL-qU.woff) format("woff"); }
-.gigantic, .huge, .large, .bigger, .big,
-h1, h2, h3, h4, h5, h6 {
-  color: #bd5248;
+h1, h2, h3 {
+  color: #ffffff;
   font-weight: bold; }
 
-.gigantic {
-  font-size: 110px;
-  line-height: 1.09;
-  letter-spacing: -2px; }
-
-.huge, h1 {
-  font-size: 68px;
+h1 {
+  font-size: 42px;
   line-height: 1.05;
   letter-spacing: -1px; }
 
-.large, h2 {
-  font-size: 42px;
+h2 {
+  font-size: 26px;
   line-height: 1.14; }
 
-.bigger, h3 {
-  font-size: 26px;
-  line-height: 1.38; }
-
-.big, h4 {
+h3 {
   font-size: 22px;
   line-height: 1.38; }
 
@@ -179,7 +164,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.2; }
 
 p {
-  margin: 0 0 20px 0; }
+  margin: 0; }
 
 em {
   font-style: italic; }
@@ -188,25 +173,25 @@ strong {
   font-weight: bold; }
 
 hr {
-  border: solid #dddddd;
+  border: solid #ddd;
   border-width: 1px 0 0;
   clear: both;
   margin: 10px 0 30px;
   height: 0; }
 
 a {
-  color: #bd5248;
+  color: #ffffff;
   text-decoration: none;
   outline: 0; }
 
 a:hover, a:focus {
-  color: #d89993; }
+  color: white; }
 
 ::selection {
-  background: #fff498; }
+  background: #FFF498; }
 
 ::-moz-selection {
-  background: #fff498; }
+  background: #FFF498; }
 
 img::selection {
   background: transparent; }
@@ -215,13 +200,62 @@ img::-moz-selection {
   background: transparent; }
 
 body {
-  -webkit-tap-highlight-color: #fff498; }
+  -webkit-tap-highlight-color: #FFF498; }
+
+* {
+  box-sizing: border-box; }
 
 body {
-  background: #f6f6f8;
-  font-size: 14px;
+  background: #40789A;
+  font-size: 16px;
   line-height: 1.6;
-  font-family: "Open Sans" sans-serif;
-  color: #2e2d33;
+  font-family: "Source Sans Pro" sans-serif;
+  color: #ffffff;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%; }
+
+i.fa {
+  display: inline-block;
+  height: 40px;
+  width: auto;
+  font-size: 1.5em;
+  line-height: 40px; }
+
+span.nav {
+  display: inline-block;
+  margin-left: 10px;
+  position: relative;
+  top: -3px;
+  height: 40px;
+  line-height: 40px;
+  text-transform: uppercase;
+  font-weight: bold; }
+
+.weather, .news, .gallery {
+  text-align: center;
+  padding: 5px 0;
+  border-bottom: 5px solid; }
+
+.weather {
+  border-color: #F5C562; }
+
+.news {
+  border-color: #9AA3E2; }
+
+.gallery {
+  border-color: #62D2E5; }
+
+.current-location {
+  margin-top: 20px;
+  text-align: right; }
+  .current-location i {
+    font-size: 4em; }
+
+.latest-locations {
+  background-color: #71CA6D;
+  height: 60px;
+  line-height: 68px;
+  border-top-left-radius: 2em;
+  border-bottom-left-radius: 2em; }
+  .latest-locations i {
+    margin-left: 10px; }

@@ -1,9 +1,9 @@
 # #-------------------------------
-# # General Site Settings
-# #
-# # title:
-# # description:
-# # email:
+# General Site Settings
+#
+title: WhereTo
+description: 'All the need-to-know stuff: weather, local news & events, image galleries - regarding cities all around the world displayed in a different manner.'
+email: angelocordon@gmail.com
 #
 # #-------------------------------
 # # SEO Section
