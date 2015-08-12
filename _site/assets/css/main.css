@@ -213,6 +213,9 @@ body {
 
 html {
   background: #40789A; }
+  @media (min-width: 1020px) {
+    html {
+      overflow-y: hidden; } }
 
 body {
   background: none !important;
@@ -229,6 +232,19 @@ i.fa, .weather i.wi {
   width: auto;
   font-size: 1.2em;
   line-height: 40px; }
+
+.rounded {
+  display: inline-block;
+  margin: 0 auto;
+  padding: 2px 20px;
+  background-color: #808485;
+  border-radius: 2em;
+  text-align: center;
+  text-transform: uppercase; }
+
+.navigation {
+  position: relative;
+  z-index: 20; }
 
 span.nav {
   display: inline-block;
@@ -264,39 +280,66 @@ span.nav {
   right: 0;
   background: url("http://c1.staticflickr.com/3/2882/13831351534_64c6d4e018_b.jpg") no-repeat fixed;
   background-size: cover;
-  -webkit-filter: blur(15px); }
+  -webkit-filter: blur(15px);
+  fiter: blur(15px); }
 
 .forecast {
   background: rgba(255, 255, 255, 0.5);
   position: relative;
-  z-index: 5; }
+  z-index: 5;
+  text-shadow: 1px 1px #999999; }
+  .forecast i {
+    display: block; }
 
-.today, .current-weather, .day {
+.today, .current-day, .day {
   display: inline-block;
-  height: 25vh;
-  padding: 20px 0; }
+  height: 30vh;
+  padding: 50px 0; }
 
 .today {
   width: 20%;
   float: left; }
+  .today sup {
+    text-transform: lowercase; }
+  .today p.rounded {
+    font-weight: bold; }
 
-.current-weather {
+.current-day {
   width: 20%;
   float: left; }
+
+p.current-stat {
+  font-size: 1.2em; }
+  p.current-stat span {
+    color: gray;
+    margin: 0 10px; }
+
+p.current-temp {
+  display: block;
+  height: 128px;
+  font-size: 8em;
+  line-height: 1; }
+
+p.current-weather {
+  display: block;
+  height: 128px;
+  font-size: 5em;
+  padding: 20px 0; }
+
+p.current-stat {
+  font-weight: bolder; }
 
 .day {
   width: 10%;
   float: left;
-  text-align: center;
-  border-left: 1px solid gray; }
-
-.rounded {
-  background-color: #808485;
-  border-radius: 2em;
-  text-transform: uppercase;
-  width: 50px;
-  display: block;
-  margin: 0 auto; }
+  border-left: 1px solid #808485;
+  text-align: center; }
+  .day i {
+    font-size: 2em;
+    margin: 20px 0; }
+  .day .temp {
+    font-weight: bolder;
+    font-size: 1.2em; }
 
 #main {
   background: url("http://c1.staticflickr.com/3/2882/13831351534_64c6d4e018_b.jpg") no-repeat fixed;
@@ -304,7 +347,7 @@ span.nav {
   max-height: 100vh; }
 
 #header {
-  height: 70vh; }
+  height: 65vh; }
 
 .wrap {
   max-width: 1120px;
