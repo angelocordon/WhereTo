@@ -3,21 +3,21 @@ layout: default
 ---
 
 <!-- City Background -->
-<div class="container" id="header">
+<div id="header">
   <!-- Input -->
-  <div class="col-md-4">
+  <div class="wrap">
     <h1>San Francisco, CA</h1>
-  </div>
 
-  <!-- Current Location -->
-  <div class="col-md-2 col-md-offset-6 current-location">
-    <i class="fa fa-map-marker"></i>
-    <p>San Francisco, CA</p>
-    <p>{{ site.time | date: '%I:%M %p' }}</p>
+    <!-- Current Location -->
+    <div class="current-location">
+      <i class="fa fa-map-marker"></i>
+      <p>San Francisco, CA</p>
+      <p>{{ site.time | date: '%I:%M %p' }}</p>
+    </div>
   </div>
 
   <!-- Laest Locations -->
-  <div class="col-md-3 col-md-offset-9 latest-locations">
+  <div class="latest-locations">
     <a href="#"> <span class="nav"> Latest Locations </span> <i class="fa fa-map"></i><a>
   </div>
 </div>

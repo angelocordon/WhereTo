@@ -5,30 +5,29 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="/assets/css/main.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.0/css/weather-icons-wind.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.0/css/weather-icons.min.css">
   </head>
   <body>
-    <div class="container-fluid" id="main">
+    <div id="main">
       <!-- City Background -->
-<div class="container" id="header">
+<div id="header">
   <!-- Input -->
-  <div class="col-md-4">
+  <div class="wrap">
     <h1>San Francisco, CA</h1>
-  </div>
 
-  <!-- Current Location -->
-  <div class="col-md-2 col-md-offset-6 current-location">
-    <i class="fa fa-map-marker"></i>
-    <p>San Francisco, CA</p>
-    <p>04:32 PM</p>
+    <!-- Current Location -->
+    <div class="current-location">
+      <i class="fa fa-map-marker"></i>
+      <p>San Francisco, CA</p>
+      <p>07:37 PM</p>
+    </div>
   </div>
 
   <!-- Laest Locations -->
-  <div class="col-md-3 col-md-offset-9 latest-locations">
+  <div class="latest-locations">
     <a href="#"> <span class="nav"> Latest Locations </span> <i class="fa fa-map"></i><a>
   </div>
 </div>
@@ -36,18 +35,18 @@
 <!-- Navigation -->
 <!-- Navigation -->
 <div class="container">
-  <a href="#" class="col-md-2 weather">
+  <a href="#" class="weather">
     <!-- <i class="wi wi-day-sunny"></i> -->
     <i class="fa fa-sun-o"></i>
     <span class="nav">Weather</span>
   </a>
 
-  <a href="#" class="col-md-2 news">
+  <a href="#" class="news">
     <i class="fa fa-paper-plane"></i>
     <span class="nav">News &amp; events</span>
   </a>
 
-  <a href="#" class="col-md-2 gallery">
+  <a href="#" class="gallery">
     <i class="fa fa-image"></i>
     <span class="nav"> Gallery</span>
   </a>
@@ -55,48 +54,50 @@
 
 
 <!-- Weather  -->
-<div class="forecast-container">
-  <div class="container forecast">
+<div class="forecast-background">
+</div>
+<div class="forecast">
+  <div class="wrap">
     <!-- Current -->
-    <div class="col-md-3">
-      <h1>82</h1>
+    <div class="today">
+      <span>82</span>
       <!-- Today's date  -->
-      <p>Mon 10</p>
+      <p>Tue 11</p>
     </div>
     <!-- Current Weather -->
-    <div class="col-md-3">
-      <h1><i class="wi wi-day-sunny"></i></h1>
+    <div class="current-weather">
+      <span><i class="wi wi-day-sunny"></i></span>
       4mph / 67
     </div>
 
     <!-- Forecast -->
-    <div class="col-md-1">
-      <p>Tue</p>
+    <div class="day">
+      <p class="rounded">Tue</p>
       <i class="wi wi-day-sunny"></i>
       <p>60</p>
     </div>
-    <div class="col-md-1">
-      <p>Wed</p>
+    <div class="day">
+      <p class="rounded">Wed</p>
       <i class="wi wi-day-sunny"></i>
       <p>60</p>
     </div>
-    <div class="col-md-1">
-      <p>Thu</p>
+    <div class="day">
+      <p class="rounded">Thu</p>
       <i class="wi wi-day-sunny"></i>
       <p>60</p>
     </div>
-    <div class="col-md-1">
-      <p>Fri</p>
+    <div class="day">
+      <p class="rounded">Fri</p>
       <i class="wi wi-day-sunny"></i>
       <p>60</p>
     </div>
-    <div class="col-md-1">
-      <p>Sat</p>
+    <div class="day">
+      <p class="rounded">Sat</p>
       <i class="wi wi-day-sunny"></i>
       <p>60</p>
     </div>
-    <div class="col-md-1">
-      <p>Sun</p>
+    <div class="day">
+      <p class="rounded">Sun</p>
       <i class="wi wi-day-sunny"></i>
       <p>60</p>
     </div>

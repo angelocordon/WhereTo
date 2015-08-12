@@ -1,0 +1,41 @@
+// Optimize background calls
+.forecast-background
+  border: 1px solid red
+  content: ''
+  height: 25vh
+  position: fixed
+  z-index: 1
+  left: 0
+  right: 0
+  background: url('http://c1.staticflickr.com/3/2882/13831351534_64c6d4e018_b.jpg') no-repeat fixed
+  background-size: cover
+  -webkit-filter: blur(15px)
+
+.forecast
+  background: rgba(255, 255, 255, 0.5)
+  position: relative
+  z-index: 5
+
+.today, .current-weather, .day
+  display: inline-block
+  height: 25vh
+  padding: 20px 0
+
+.today
+  @include span (2)
+
+.current-weather
+  @include span (2)
+
+.day
+  @include span (1)
+  text-align: center
+  border-left: 1px solid lighten(#000, 50%)
+
+.rounded
+  background-color: #808485
+  border-radius: 2em
+  text-transform: uppercase
+  width: 50px
+  display: block
+  margin: 0 auto

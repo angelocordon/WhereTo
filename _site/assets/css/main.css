@@ -142,16 +142,15 @@ table {
 td, th {
   padding: 0; }
 
-.background, #main {
-  background: url("http://c1.staticflickr.com/3/2882/13831351534_64c6d4e018_b.jpg") no-repeat center center fixed !important;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover; }
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
 
 h1, h2, h3 {
   color: #ffffff;
-  font-weight: bold; }
+  font-weight: bold;
+  margin: 0px; }
 
 h1 {
   font-size: 42px;
@@ -255,8 +254,66 @@ span.nav {
 .gallery {
   border-color: #62D2E5; }
 
+.forecast-background {
+  border: 1px solid red;
+  content: "";
+  height: 25vh;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  background: url("http://c1.staticflickr.com/3/2882/13831351534_64c6d4e018_b.jpg") no-repeat fixed;
+  background-size: cover;
+  -webkit-filter: blur(15px); }
+
+.forecast {
+  background: rgba(255, 255, 255, 0.5);
+  position: relative;
+  z-index: 5; }
+
+.today, .current-weather, .day {
+  display: inline-block;
+  height: 25vh;
+  padding: 20px 0; }
+
+.today {
+  width: 20%;
+  float: left; }
+
+.current-weather {
+  width: 20%;
+  float: left; }
+
+.day {
+  width: 10%;
+  float: left;
+  text-align: center;
+  border-left: 1px solid gray; }
+
+.rounded {
+  background-color: #808485;
+  border-radius: 2em;
+  text-transform: uppercase;
+  width: 50px;
+  display: block;
+  margin: 0 auto; }
+
+#main {
+  background: url("http://c1.staticflickr.com/3/2882/13831351534_64c6d4e018_b.jpg") no-repeat fixed;
+  background-size: cover;
+  max-height: 100vh; }
+
 #header {
   height: 70vh; }
+
+.wrap {
+  max-width: 1120px;
+  margin-left: auto;
+  margin-right: auto; }
+  .wrap:after {
+    content: " ";
+    display: block;
+    clear: both; }
 
 .current-location {
   margin-top: 20px;
@@ -265,6 +322,7 @@ span.nav {
     font-size: 4em; }
 
 .latest-locations {
+  display: none;
   background-color: #71CA6D;
   height: 60px;
   line-height: 68px;
@@ -273,6 +331,3 @@ span.nav {
   margin-top: 30%; }
   .latest-locations i {
     margin-left: 10px; }
-
-.forecast {
-  background: rgba(255, 255, 255, 0.5); }
