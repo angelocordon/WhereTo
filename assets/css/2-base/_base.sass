@@ -1,0 +1,90 @@
+//	Typography
+
+h1, h2, h3
+  color: $text-color
+  font-weight: bold
+  margin: 0px
+
+h1
+  font-size: 42px
+  line-height: 1.05
+  letter-spacing: -1px
+
+h2
+  font-size: 26px
+  line-height: 1.14
+
+h3
+  font-size: 22px
+  line-height: 1.38
+
+.small, small
+  font-size: 10px
+  line-height: 1.2
+
+p
+  margin: 0
+
+em
+  font-style: italic
+
+strong
+  font-weight: bold
+
+hr
+  border: solid #ddd
+  border-width: 1px 0 0
+  clear: both
+  margin: 10px 0 30px
+  height: 0
+
+
+
+// Links
+
+a
+  color: $link-color
+  text-decoration: none
+  outline: 0
+
+a:hover, a:focus
+  color: lighten($link-color, 20%)
+
+
+
+// Selection colors (easy to forget)
+
+::selection
+  background: $selection-color
+
+::-moz-selection
+  background: $selection-color
+
+img::selection
+  background: transparent
+
+img::-moz-selection
+  background: transparent
+
+body
+  -webkit-tap-highlight-color: $selection-color
+
+
+
+// Basic Styles
+*
+  box-sizing: border-box
+
+html
+  background: $bg-color
+  @media (min-width: 1020px)
+    overflow-y: hidden
+
+body
+  background: none !important
+  font-size: 16px
+  line-height: 1.6
+  font-family: 'Source Sans Pro' sans-serif
+  color: $text-color
+  -webkit-font-smoothing: antialiased
+  -webkit-text-size-adjust: 100%

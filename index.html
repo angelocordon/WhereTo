@@ -1,0 +1,29 @@
+---
+layout: default
+---
+
+<!-- City Background -->
+<div class="header">
+  <div class="wrap">
+    <!-- Input -->
+    <input type="text" name="location" id="locator" placeholder="San Francisco, CA">
+
+    <!-- Current Location -->
+    <div class="current-location">
+      <i class="fa fa-map-marker"></i>
+      <p class="current-city">San Francisco, CA</p>
+      <p class="current-time">{{ site.time | date: '%I:%M %p' }}</p>
+    </div>
+  </div>
+
+  <!-- Laest Locations -->
+  <div class="latest-locations">
+    <a href="#"><span class="nav">Latest Locations</span> <i class="fa fa-map"></i><a>
+  </div>
+</div>
+
+<!-- Navigation -->
+{% include navigation.html %}
+
+<!-- Weather  -->
+{% include weather/forecast.html %}
