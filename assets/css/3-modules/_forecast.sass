@@ -38,8 +38,9 @@
 p.current-stat
   font-size: 1.2em
   span
-    color: darken(#fff, 50%)
     margin: 0 10px
+    color: rgba(255, 255, 255, 0.5)
+    text-shadow: none
 
 p.current-temp
   display: block
@@ -58,8 +59,9 @@ p.current-stat
 
 .day
   @include span (1)
-  border-left: 1px solid #808485 //lighten(#000, 50%)
+  // border-left: 1px solid #808485 //lighten(#000, 50%)
   text-align: center
+  border-left: 1px solid rgba(128, 132, 133, 0.5)
   i
     font-size: 2em
     margin: 20px 0

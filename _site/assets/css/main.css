@@ -237,13 +237,16 @@ i.fa, .weather i.wi {
   display: inline-block;
   margin: 0 auto;
   padding: 2px 20px;
-  background-color: #808485;
+  background-color: rgba(128, 132, 133, 0.5);
   border-radius: 2em;
   text-align: center;
   text-transform: uppercase; }
 
 .navigation {
+  margin-top: -20px;
+  height: 8vh;
   position: relative;
+  top: 2px;
   z-index: 20; }
 
 span.nav {
@@ -257,12 +260,18 @@ span.nav {
   font-weight: bold; }
 
 .weather, .news, .gallery {
-  text-align: center;
+  width: 18%;
+  float: left;
   padding: 5px 0;
-  border-bottom: 8px solid; }
+  border-bottom: 8px solid;
+  text-align: center; }
+
+.news, .gallery {
+  color: rgba(255, 255, 255, 0.7); }
 
 .weather {
-  border-color: #F5C562; }
+  border-color: #F5C562;
+  color: rgba 255, 255, 255, 1 !important; }
 
 .news {
   border-color: #9AA3E2; }
@@ -311,8 +320,9 @@ span.nav {
 p.current-stat {
   font-size: 1.2em; }
   p.current-stat span {
-    color: gray;
-    margin: 0 10px; }
+    margin: 0 10px;
+    color: rgba(255, 255, 255, 0.5);
+    text-shadow: none; }
 
 p.current-temp {
   display: block;
@@ -332,8 +342,8 @@ p.current-stat {
 .day {
   width: 10%;
   float: left;
-  border-left: 1px solid #808485;
-  text-align: center; }
+  text-align: center;
+  border-left: 1px solid rgba(128, 132, 133, 0.5); }
   .day i {
     font-size: 2em;
     margin: 20px 0; }
@@ -346,11 +356,11 @@ p.current-stat {
   background-size: cover;
   max-height: 100vh; }
 
-#header {
+.header {
   height: 65vh; }
 
 .wrap {
-  max-width: 1120px;
+  max-width: 1280px;
   margin-left: auto;
   margin-right: auto; }
   .wrap:after {
@@ -358,19 +368,41 @@ p.current-stat {
     display: block;
     clear: both; }
 
+input#locator {
+  display: inline-block;
+  margin-top: 40px;
+  height: 100px;
+  background: none;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  font-size: 4em; }
+
+::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.5); }
+
 .current-location {
-  margin-top: 20px;
-  text-align: right; }
+  display: inline-block;
+  margin-top: 60px;
+  float: right;
+  text-align: right;
+  text-transform: uppercase; }
   .current-location i {
-    font-size: 4em; }
+    font-size: 6em; }
+
+p.current-city {
+  margin-top: 20px; }
 
 .latest-locations {
-  display: none;
-  background-color: #71CA6D;
+  margin-top: 15%;
+  padding: 0 20px;
+  width: 23%;
+  float: left;
   height: 60px;
-  line-height: 68px;
+  float: right;
+  background-color: #71CA6D;
   border-top-left-radius: 2em;
   border-bottom-left-radius: 2em;
-  margin-top: 30%; }
+  line-height: 68px;
+  text-shadow: 1px 1px #999999; }
   .latest-locations i {
     margin-left: 10px; }

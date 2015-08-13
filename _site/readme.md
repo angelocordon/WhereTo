@@ -6,11 +6,15 @@ This is a code test I'm doing to work on my front-end skills. The original [desi
 
 
 ### ToDo
-  + Dump Bootstrap, implement Susy
-  + Come up with a blur effect solution for the Weather Forecast
-  + Navigation should be darkened unless active or on hover
-  + Background needs to cover fully
-  + Input field
+  ~+ Dump Bootstrap, implement Susy~
+  ~+ Come up with a blur effect solution for the Weather Forecast~
+  ~+ Navigation should be darkened unless active or on hover~
+  ~+ Background needs to cover fully~
+  ~+ Input field~
+  + Clean up Sass files to make responsive
+  + Build into Chrome extension?
+  + ???
+  + Profit
 
 ### Features
   + Create background library

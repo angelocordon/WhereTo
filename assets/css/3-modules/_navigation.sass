@@ -1,5 +1,8 @@
 .navigation
+  margin-top: -20px
+  height: 8vh
   position: relative
+  top: 2px
   z-index: 20
 
 span.nav
@@ -13,12 +16,17 @@ span.nav
   font-weight: bold
 
 .weather, .news, .gallery
-  text-align: center
+  @include span (1.8)
   padding: 5px 0
   border-bottom: 8px solid
+  text-align: center
+
+.news, .gallery
+  color: rgba(255, 255, 255, 0.7)
 
 .weather
   border-color: #F5C562
+  color: rgba (255, 255, 255, 1) !important
   i.wi
     @extend i.fa
 

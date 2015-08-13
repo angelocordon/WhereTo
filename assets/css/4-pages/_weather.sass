@@ -1,16 +1,37 @@
+input#locator
+  display: inline-block
+  margin-top: 40px
+  height: 100px
+  background: none
+  border: none
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5)
+  font-size: 4em
+
+::-webkit-input-placeholder
+  color: rgba(255, 255, 255, 0.5)
+
 .current-location
-  margin-top: 20px
+  display: inline-block
+  margin-top: 60px
+  float: right
   text-align: right
+  text-transform: uppercase
   i
-    font-size: 4em
+    font-size: 6em
+
+p.current-city
+  margin-top: 20px
 
 .latest-locations
-  display: none
-  background-color: #71CA6D
+  margin-top: 15%
+  padding: 0 20px
+  @include span(2.3)
   height: 60px
-  line-height: 68px
+  float: right
+  background-color: #71CA6D
   border-top-left-radius: 2em
   border-bottom-left-radius: 2em
-  margin-top: 30%
+  line-height: 68px
+  text-shadow: 1px 1px lighten(#000, 60%)
   i
     margin-left: 10px
