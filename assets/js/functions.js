@@ -54,4 +54,30 @@ $(function() {
 // Current Location
 // Find user's current location, to use for Flickr + WeatherAPI
 
+
 // Forcast Module: Need to layout a 6 day forcast. ExpressJS?
+
+// Flickr
+var key = '4caa2303454cc8f4922ecc5bc3caa28a';
+
+// Parse target city input and put into variable
+var target_city = 'san francisco';
+console.log (target_city)
+
+var link = 'https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=' + key + '&tags=' + target_city + '&per_page=1&format=json&jsoncallback=?';
+
+console.log(link);
+
+// Create an empty variable
+var source;
+// Parse the JSON data from the Link variable
+$.getJSON( link, function (data) {
+  // What is happening with function (i, item) ?
+  // Each data under Photos:photo (from Flickr JSON), get the index and call it item?
+  $.each(data.photos.photo, function(i,item){
+    source = 'http://farm' + item.farm + '.static.flickr.com/' + item.server + '/' + item.id + '_' + item.secret + '_o.jpg';
+    console.log(source);
+    // if the index is = 3...  ?
+    // if ( i == 3) return false;
+  })
+});
