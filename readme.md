@@ -18,12 +18,12 @@ This is a code test I'm doing to work on my front-end skills. The original [desi
   + Build into Chrome extension?
   + Use Ember(?)/React to change backgrounds based on city inputs
   + Actually implement a weather API
-  + Look into Flickr API for backgrounds
-  + Create a JS clock
+  + ~~Look into Flickr API for backgrounds~~
+  + ~~Create a JS clock~~
   + ???
   + Profit
 
 ### Bugs
-  + (Clock) Getting a 12 hour clock to work. If the currentHours is over 12, it subtracts 12 from the currentHour. However, when it's 11 am, it's showing up as - 1 am.
+  + ~~(Clock) Getting a 12 hour clock to work. If the currentHours is over 12, it subtracts 12 from the currentHour. However, when it's 11 am, it's showing up as - 1 am.~~
   + (Flickr) Find a random picture each time based on the target_city
-  + (Flickr) Find pictures with original sizes only
+  + ~~(Flickr) Find pictures with original sizes only~~

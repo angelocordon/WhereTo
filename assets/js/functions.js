@@ -1,4 +1,3 @@
-
 // DATE
 var monthNames = ["January", "February", "March", "April", "May", "June",
   "July", "August", "September", "October", "November", "December"
@@ -37,7 +36,7 @@ function updateTime() {
 function flashTime() {
     var now = new Date();
     var hour = now.getHours();
-    var hours = ( hour < 12 ) ? hour - 12 : hour
+    var hours = ( hour > 12 ) ? hour - 12 : hour
     var minute = now.getMinutes();
     var minutes = ( minute < 10 ) ? '0' + minute : minute;
     var second = now.getSeconds();
@@ -61,23 +60,51 @@ $(function() {
 var key = '4caa2303454cc8f4922ecc5bc3caa28a';
 
 // Parse target city input and put into variable
-var target_city = 'san francisco';
-console.log (target_city)
+var target_city = 'sanfrancisco';
 
-var link = 'https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=' + key + '&tags=' + target_city + '&per_page=1&format=json&jsoncallback=?';
 
-console.log(link);
+var group_id = '13197975@N00'
 
-// Create an empty variable
+
+// note to randomize page number
+var link = 'https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=' + key + '&tags=' + target_city + '&group_id=' + group_id + '&extras=o_dims,o_url' + '&extras=original_format,tags' + '&per_page=1&page=1&format=json&jsoncallback=?';
+
+// console.log('link: ' + link);
+
+
 var source;
-// Parse the JSON data from the Link variable
-$.getJSON( link, function (data) {
-  // What is happening with function (i, item) ?
-  // Each data under Photos:photo (from Flickr JSON), get the index and call it item?
+var item_id;
+$.getJSON(link, function(data){
   $.each(data.photos.photo, function(i,item){
-    source = 'http://farm' + item.farm + '.static.flickr.com/' + item.server + '/' + item.id + '_' + item.secret + '_o.jpg';
-    console.log(source);
-    // if the index is = 3...  ?
-    // if ( i == 3) return false;
-  })
+    source = 'http://farm' + item.farm + '.static.flickr.com/' + item.server + '/' + item.id + '_' + item.secret + '.jpg';
+    item_id = item.id;
+  });
+
+  var imageJSON = 'https://api.flickr.com/services/rest/?method=flickr.photos.getSizes&api_key=' + key + '&photo_id=' + item_id + '&format=json';
+
+  // Get the large size source link and assign to image_link
+
+  $.ajax({
+    method: 'get',
+    dataType: 'jsonp',
+    url: imageJSON})
+  .done(function(response){
+    if(response !== 200){
+      console.log("Error sending request to api: ", response, imageJSON);
+    }
+  });
 });
+
+var image_link;
+function jsonFlickrApi(response){
+  if(response.stat !== 'ok'){
+    console.log("Error getting response from api: ", imageJSON);
+  }else{
+    var images = response.sizes.size.filter(function(photo){
+      return photo.label === 'Large 2048';
+    });
+    image_link = images[0].source;
+    console.log('link: ', image_link);
+    $('#main, .forecast-background').css('background-image', 'url(' + image_link + ')');
+  }
+};
