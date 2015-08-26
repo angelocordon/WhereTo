@@ -62,8 +62,6 @@ $(function() {
 var key = '4caa2303454cc8f4922ecc5bc3caa28a';
 var group_id = '13197975@N00'
 
-
-
 var image_link;
 function jsonFlickrApi(response){
   if(response.stat !== 'ok'){
@@ -78,9 +76,6 @@ function jsonFlickrApi(response){
   }
 };
 
-
-
-
 // Parse target city input and put into variable
 var target_city;
 
@@ -91,8 +86,6 @@ $('#locator').on('keydown', function adapt(value){
 
     // Sets up a Flickr API call that is looking for an image tag with target_city wihtin a group.
     var link = 'https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=' + key + '&tags=' + target_city + '&group_id=' + group_id + '&extras=o_dims,o_url' + '&extras=original_format,tags' + '&per_page=1&page=1&format=json&jsoncallback=?';
-
-    console.log(' city: ', target_city, '\n', 'link: ', link);
 
     // Builds the JSON link to get larger image sizes and appends as a background.
     var source;
