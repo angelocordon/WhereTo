@@ -20,6 +20,7 @@ This is a code test I'm doing to work on my front-end skills. The original [desi
   + Actually implement a weather API
   + ~~Look into Flickr API for backgrounds~~
   + ~~Create a JS clock~~
+  + Include data attribution from Flickr images (include owner screen name or link to actual set)
   + ???
   + Profit
 

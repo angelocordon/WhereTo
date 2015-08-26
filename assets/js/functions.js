@@ -56,44 +56,13 @@ $(function() {
 
 // Forcast Module: Need to layout a 6 day forcast. ExpressJS?
 
+
+
 // Flickr
 var key = '4caa2303454cc8f4922ecc5bc3caa28a';
-
-// Parse target city input and put into variable
-var target_city = 'sanfrancisco';
-
-
 var group_id = '13197975@N00'
 
 
-// note to randomize page number
-var link = 'https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=' + key + '&tags=' + target_city + '&group_id=' + group_id + '&extras=o_dims,o_url' + '&extras=original_format,tags' + '&per_page=1&page=1&format=json&jsoncallback=?';
-
-// console.log('link: ' + link);
-
-
-var source;
-var item_id;
-$.getJSON(link, function(data){
-  $.each(data.photos.photo, function(i,item){
-    source = 'http://farm' + item.farm + '.static.flickr.com/' + item.server + '/' + item.id + '_' + item.secret + '.jpg';
-    item_id = item.id;
-  });
-
-  var imageJSON = 'https://api.flickr.com/services/rest/?method=flickr.photos.getSizes&api_key=' + key + '&photo_id=' + item_id + '&format=json';
-
-  // Get the large size source link and assign to image_link
-
-  $.ajax({
-    method: 'get',
-    dataType: 'jsonp',
-    url: imageJSON})
-  .done(function(response){
-    if(response !== 200){
-      console.log("Error sending request to api: ", response, imageJSON);
-    }
-  });
-});
 
 var image_link;
 function jsonFlickrApi(response){
@@ -101,10 +70,51 @@ function jsonFlickrApi(response){
     console.log("Error getting response from api: ", imageJSON);
   }else{
     var images = response.sizes.size.filter(function(photo){
-      return photo.label === 'Large 2048';
+      return photo.label === 'Large';
     });
     image_link = images[0].source;
     console.log('link: ', image_link);
     $('#main, .forecast-background').css('background-image', 'url(' + image_link + ')');
   }
 };
+
+
+
+
+// Parse target city input and put into variable
+var target_city;
+
+$('#locator').on('keydown', function adapt(value){
+  // After hitting 'enter' from the input
+  if(value.keyCode == 13) {
+    target_city = $(this).val();
+
+    // Sets up a Flickr API call that is looking for an image tag with target_city wihtin a group.
+    var link = 'https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=' + key + '&tags=' + target_city + '&group_id=' + group_id + '&extras=o_dims,o_url' + '&extras=original_format,tags' + '&per_page=1&page=1&format=json&jsoncallback=?';
+
+    console.log(' city: ', target_city, '\n', 'link: ', link);
+
+    // Builds the JSON link to get larger image sizes and appends as a background.
+    var source;
+    var item_id;
+    $.getJSON(link, function(data){
+      $.each(data.photos.photo, function(i,item){
+        source = 'http://farm' + item.farm + '.static.flickr.com/' + item.server + '/' + item.id + '_' + item.secret + '.jpg';
+        item_id = item.id;
+      });
+
+      var imageJSON = 'https://api.flickr.com/services/rest/?method=flickr.photos.getSizes&api_key=' + key + '&photo_id=' + item_id + '&format=json';
+
+      // Get the large size source link and assign to image_link
+      $.ajax({
+        method: 'get',
+        dataType: 'jsonp',
+        url: imageJSON})
+      .done(function(response){
+        if(response !== 200){
+          console.log("Error sending request to api: ", response, imageJSON);
+        }
+      });
+    });
+  }
+});
