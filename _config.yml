@@ -9,3 +9,6 @@ port: 3000
 sass:
   sass_dir: assets/css
   style: :nested
+
+gems:
+  -jekyll-angular

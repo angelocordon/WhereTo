@@ -6,7 +6,9 @@ layout: default
 <div class="header">
   <div class="wrap">
     <!-- Input -->
-    <input type="text" name="location" id="locator" placeholder="San Francisco, CA"/>
+    <input type="text" name="location" id="locator" placeholder="San Francisco, CA" ng-model="nglocation" />
+
+    <span>{{ nglocation | angular }}</span>
 
     <!-- Current Location -->
     <div class="current-location">
