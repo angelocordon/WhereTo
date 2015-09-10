@@ -10,5 +10,5 @@ sass:
   sass_dir: assets/css
   style: :nested
 
-gems:
-  -jekyll-angular
+# gems:
+#   - jekyll-angular

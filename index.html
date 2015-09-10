@@ -4,23 +4,25 @@ layout: default
 
 <!-- City Background -->
 <div class="header">
-  <div class="wrap">
-    <!-- Input -->
-    <input type="text" name="location" id="locator" placeholder="San Francisco, CA" ng-model="nglocation" />
+  <div ng-controller="locatorController as locator">
+    <div class="wrap">
+      <!-- Input -->
+      <input type="text" name="location" id="locator" placeholder="San Francisco, CA" ng-model="nglocation" />
 
-    <span>{{ "nglocation" | angular }}</span>
-
-    <!-- Current Location -->
-    <div class="current-location">
-      <i class="fa fa-map-marker"></i>
-      <p class="current-city">San Francisco, CA</p>
-      <p class="current-time"></p>
+      <!-- Current Location -->
+      <div class="current-location">
+        <i class="fa fa-map-marker"></i>
+        <p class="current-city">San Francisco, CA</p>
+        <p class="current-time"></p>
+      </div>
     </div>
-  </div>
 
-  <!-- Laest Locations -->
-  <div class="latest-locations">
-    <a href="#"><span class="nav">Latest Locations</span> <i class="fa fa-map"></i><a>
+    <!-- Laest Locations -->
+    <div class="latest-locations">
+      <a href="#"><span class="nav">Latest Locations</span> <i class="fa fa-map"></i><a>
+      <p> [[ nglocation ]]</p>
+      <p ng-repeat="city in locator.locations">[[ city ]]</p>
+    </div>
   </div>
 </div>
 
